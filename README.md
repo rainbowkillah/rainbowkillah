@@ -48,13 +48,13 @@
 
 <div align="center">
 
-<a href="https://github-readme-stats.vercel.app/api?username=rainbowkillah&show_icons=true&theme=transparent">
+<a href="https://github.com/rainbowkillah">
   <img height="160" src="https://github-readme-stats.vercel.app/api?username=rainbowkillah&show_icons=true&theme=transparent" alt="GitHub stats" />
 </a>
-<a href="https://streak-stats.demolab.com?user=rainbowkillah&theme=transparent">
+<a href="https://github.com/rainbowkillah">
   <img height="160" src="https://streak-stats.demolab.com?user=rainbowkillah&theme=transparent" alt="GitHub streak" />
 </a>
-<a href="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowkillah&layout=compact&theme=transparent&langs_count=8">
+<a href="https://github.com/rainbowkillah">
   <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rainbowkillah&layout=compact&theme=transparent&langs_count=8" alt="Top languages" />
 </a>
 
