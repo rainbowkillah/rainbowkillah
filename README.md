@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/followers/rainbowkillah?label=Followers&style=flat" alt="followers" />
   </a>
   <a href="https://wakatime.com/@d5eb5789-e8c5-4d8f-ac0b-829e05dc9e30">
-    <img src="https://wakatime.com/badge/user/00000000-0000-0000-0000-000000000000.svg" alt="Wakatime" />
+    <img src="https://wakatime.com/badge/user/d5eb5789-e8c5-4d8f-ac0b-829e05dc9e30.svg" alt="Wakatime" />
   </a>
 </p>
 
