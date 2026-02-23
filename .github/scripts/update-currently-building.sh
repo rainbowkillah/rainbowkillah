@@ -27,7 +27,12 @@ if [[ -n "${GITHUB_TOKEN:-}" ]]; then
   curl_args+=(-H "Authorization: Bearer ${GITHUB_TOKEN}")
 fi
 
-api_response="$(curl "${curl_args[@]}" "${API_URL}")"
+api_response="$(curl "${curl_args[@]}" "${API_URL}" || { echo "Failed to fetch repositories from GitHub API." >&2; exit 1; })"
+
+if ! jq -e 'type == "array"' <<<"${api_response}" >/dev/null 2>&1; then
+  echo "GitHub API returned invalid response format." >&2
+  exit 1
+fi
 
 build_rows="$(jq -r '
   map(select(.fork == false and .archived == false))[:4]
@@ -51,6 +56,12 @@ generated_file="$(mktemp)"
   echo "</p>"
   echo "<p align=\"center\"><sub>Auto-updated from latest repos via GitHub Actions.</sub></p>"
 } >"${generated_file}"
+
+output_file="$(mktemp)"
+if ! grep -q "${START_MARKER}" "${README_PATH}" || ! grep -q "${END_MARKER}" "${README_PATH}"; then
+  echo "Markers not found in README.md. Aborting update." >&2
+  exit 1
+fi
 
 output_file="$(mktemp)"
 awk -v start="${START_MARKER}" -v end="${END_MARKER}" -v gen="${generated_file}" '
