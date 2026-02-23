@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OWNER="rainbowkillah"
+OWNER="${GITHUB_REPOSITORY_OWNER:-rainbowkillah}"
 README_PATH="README.md"
 START_MARKER="<!-- currently-building:start -->"
 END_MARKER="<!-- currently-building:end -->"
@@ -41,7 +41,7 @@ build_rows="$(jq -r '
       html_url: .html_url
     })
   | .[]
-  | "  <a href=\"\(.html_url)\"><img src=\"https://img.shields.io/static/v1?label=currently%20building&message=\(.name|@uri)&color=0A66C2&style=for-the-badge&logo=github\" alt=\"\(.name)\" /></a>"
+  | "  <a href=\"\(.html_url)\"><img src=\"https://img.shields.io/static/v1?label=currently%20building&message=\(.name|@uri)&color=0A66C2&style=for-the-badge&logo=github\" alt=\"\(.name | gsub("[&<>\"]"; {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}))\" /></a>"
 ' <<<"${api_response}")"
 
 if [[ -z "${build_rows}" ]]; then
@@ -50,20 +50,25 @@ if [[ -z "${build_rows}" ]]; then
 fi
 
 generated_file="$(mktemp)"
+output_file="$(mktemp)"
+trap 'rm -f "${generated_file}" "${output_file}"' EXIT
 {
   echo "<p align=\"center\">"
   echo "${build_rows}"
   echo "</p>"
   echo "<p align=\"center\"><sub>Auto-updated from latest repos via GitHub Actions.</sub></p>"
 } >"${generated_file}"
-
-output_file="$(mktemp)"
 if ! grep -q "${START_MARKER}" "${README_PATH}" || ! grep -q "${END_MARKER}" "${README_PATH}"; then
   echo "Markers not found in README.md. Aborting update." >&2
   exit 1
 fi
 
 output_file="$(mktemp)"
+if ! grep -q "${START_MARKER}" "${README_PATH}" || ! grep -q "${END_MARKER}" "${README_PATH}"; then
+  echo "Markers not found in ${README_PATH}; aborting update." >&2
+  exit 1
+fi
+
 awk -v start="${START_MARKER}" -v end="${END_MARKER}" -v gen="${generated_file}" '
   $0 == start {
     print
