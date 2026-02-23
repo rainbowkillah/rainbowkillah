@@ -73,10 +73,10 @@
 ## Currently Building
 <!-- currently-building:start -->
 <p align="center">
+  <a href="https://github.com/rainbowkillah/rainbowkillah"><img src="https://img.shields.io/static/v1?label=currently%20building&message=rainbowkillah&color=0A66C2&style=for-the-badge&logo=github" alt="rainbowkillah" /></a>
   <a href="https://github.com/rainbowkillah/tiktok-live-platform"><img src="https://img.shields.io/static/v1?label=currently%20building&message=tiktok-live-platform&color=0A66C2&style=for-the-badge&logo=github" alt="tiktok-live-platform" /></a>
-  <a href="https://github.com/rainbowkillah/TikTok-Live-Connector"><img src="https://img.shields.io/static/v1?label=currently%20building&message=TikTok-Live-Connector&color=0A66C2&style=for-the-badge&logo=github" alt="TikTok-Live-Connector" /></a>
-  <a href="https://github.com/rainbowkillah/cloudflare-mono-repo"><img src="https://img.shields.io/static/v1?label=currently%20building&message=cloudflare-mono-repo&color=0A66C2&style=for-the-badge&logo=github" alt="cloudflare-mono-repo" /></a>
-  <a href="https://github.com/rainbowkillah/edge-landing-ts"><img src="https://img.shields.io/static/v1?label=currently%20building&message=edge-landing-ts&color=0A66C2&style=for-the-badge&logo=github" alt="edge-landing-ts" /></a>
+  <a href="https://github.com/rainbowkillah/crispy-enigma"><img src="https://img.shields.io/static/v1?label=currently%20building&message=crispy-enigma&color=0A66C2&style=for-the-badge&logo=github" alt="crispy-enigma" /></a>
+  <a href="https://github.com/rainbowkillah/cf-mono-repo"><img src="https://img.shields.io/static/v1?label=currently%20building&message=cf-mono-repo&color=0A66C2&style=for-the-badge&logo=github" alt="cf-mono-repo" /></a>
 </p>
 <p align="center"><sub>Auto-updated from latest repos via GitHub Actions.</sub></p>
 <!-- currently-building:end -->
