@@ -73,9 +73,9 @@
 ## Currently Building
 <!-- currently-building:start -->
 <p align="center">
+  <a href="https://github.com/rainbowkillah/rainbowkillah"><img src="https://img.shields.io/static/v1?label=currently%20building&message=rainbowkillah&color=0A66C2&style=for-the-badge&logo=github" alt="rainbowkillah" /></a>
   <a href="https://github.com/rainbowkillah/gist"><img src="https://img.shields.io/static/v1?label=currently%20building&message=gist&color=0A66C2&style=for-the-badge&logo=github" alt="gist" /></a>
   <a href="https://github.com/rainbowkillah/tiktok-live-platform"><img src="https://img.shields.io/static/v1?label=currently%20building&message=tiktok-live-platform&color=0A66C2&style=for-the-badge&logo=github" alt="tiktok-live-platform" /></a>
-  <a href="https://github.com/rainbowkillah/rainbowkillah"><img src="https://img.shields.io/static/v1?label=currently%20building&message=rainbowkillah&color=0A66C2&style=for-the-badge&logo=github" alt="rainbowkillah" /></a>
   <a href="https://github.com/rainbowkillah/crispy-enigma"><img src="https://img.shields.io/static/v1?label=currently%20building&message=crispy-enigma&color=0A66C2&style=for-the-badge&logo=github" alt="crispy-enigma" /></a>
 </p>
 <p align="center"><sub>Auto-updated from latest repos via GitHub Actions.</sub></p>
